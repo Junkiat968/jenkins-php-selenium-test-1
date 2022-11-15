@@ -4,7 +4,7 @@ pipeline {
 		stage('Setup bridge network') {
 	        agent any
 				steps {
-						sh 'docker network rm my-net'
+						
 				    sh 'docker network create --driver bridge my-net'
 			    }
 	    }
