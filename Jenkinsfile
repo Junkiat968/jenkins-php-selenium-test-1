@@ -4,8 +4,6 @@ pipeline {
 		stage('Setup bridge network') {
 	        agent any
 				steps {
-						sh 'chmod +x ./jenkins/scripts/kill.sh'
-						sh './jenkins/scripts/kill.sh'
 						sh 'docker network rm my-net'
 				    sh 'docker network create --driver bridge my-net'
 			    }
